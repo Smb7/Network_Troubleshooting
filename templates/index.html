@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Troubleshooting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Network Troubleshooting</h1>
+    </div>
+
+    <div class="container">
+        <div class="hostname">
+            <form action="/hostname" method="get">
+                <label for="hostname">Get Hostname</label>
+                <button type="submit">Ok</button>
+            </form>
+        </div>
+
+        <div class="internet">
+            <form action="/internet" method="get">
+                <label for="ip">Ping Internet</label>
+                <button type="submit">Ping</button>
+            </form>
+        </div>
+
+        <div class="intranet">
+            <form action="/intranet" method="get">
+                <label for="server">Ping Intranet</label>
+                <select name="server" id="server">
+                    <option value="">text</option>
+                    <option value="">text</option>
+                    <option value="">text</option>
+                    <option value="">text</option>
+                    <option value="">text</option>
+                </select>
+                <button type="submit">Ping</button>
+            </form>
+        </div>
+
+        <div class="ipconfig">
+            <form action="/ipconfig" method="get">
+                <label for="ipconfig">IP Configuration</label>
+                <button type="submit">Ok</button>
+            </form>
+        </div>
+
+        <div class="diagnostic">
+            <form action="/diagnostic" method="get">
+                <label for="servers">Choose a Server</label>
+                <select name="server" id="server">
+                    <option value="">text</option>
+                    <option value="">text</option>
+                    <option value="">text</option>
+                    <option value="">text</option>
+                    <option value="">text</option>
+                </select>
+                <button type="submit">Run Diagnostic</button>
+            </form>
+        </div>
+
+        <div class="ipconfig_flushdns">
+            <form action="/ipconfig_flushdns" method="get">
+                <label for="dnsflush">DNS Flush</label>
+                <button type="submit">Ok</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
